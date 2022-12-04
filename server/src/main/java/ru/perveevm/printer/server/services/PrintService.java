@@ -65,7 +65,7 @@ public class PrintService {
             } catch (IOException e) {
                 throw new PrinterException("cannot write source file", e);
             }
-            break;
+            return;
         }
 
         throw new PrinterException("user not found");
