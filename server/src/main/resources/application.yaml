@@ -1,4 +1,7 @@
 printing-server:
-    directory: "/etc/ejudge-new-code-printing/queue"
-    users: "/etc/ejudge-new-code-printing/users.csv"
-    tokens: "/etc/ejudge-new-code-printing/tokens.csv"
+    directory: "/etc/icpc-printer/queue"
+    users: "/etc/icpc-printer/users.csv"
+    tokens: "/etc/icpc-printer/tokens.csv"
+
+server:
+    port: 8095
