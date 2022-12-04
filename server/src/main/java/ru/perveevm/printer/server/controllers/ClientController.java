@@ -49,12 +49,14 @@ public class ClientController {
                     </style>
                 </head>
                 """);
-//        html.append("<pre>");
+        html.append("<body>\n");
+        html.append("<pre>\n");
         html.append(StringEscapeUtils.escapeHtml4(source)
-                .replace(System.lineSeparator(), "<br/>")
-                .replace("\t", "&#09;")
-                .replace("    ", "&#09;"));
-//        html.append("</pre>");
+                .replace(System.lineSeparator(), "<br/>"));
+//                .replace("\t", "&#09;")
+//                .replace("    ", "&#09;"));
+        html.append("</pre>\n");
+        html.append("</body>\n");
         html.append("</html>");
         return ResponseEntity.ok(html);
     }
