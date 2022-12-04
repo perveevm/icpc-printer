@@ -33,13 +33,6 @@ public class ClientController {
         }
 
         StringBuilder html = new StringBuilder();
-//        html.append("""
-//                <!DOCTYPE html [
-//                  <!ENTITY % htmlentities SYSTEM "https://www.w3.org/2003/entities/2007/htmlmathml-f.ent">
-//                  %htmlentities;
-//                ]>
-//                <!-- your XHTML text following here -->
-//                """);
         html.append("<html>\n");
         html.append("""
                 <head>
@@ -53,8 +46,6 @@ public class ClientController {
         html.append("<pre>\n");
         html.append(StringEscapeUtils.escapeHtml4(source)
                 .replace(System.lineSeparator(), "<br/>"));
-//                .replace("\t", "&#09;")
-//                .replace("    ", "&#09;"));
         html.append("</pre>\n");
         html.append("</body>\n");
         html.append("</html>");
