@@ -1,1 +1,7 @@
 /.idea/
+/client/target/
+/client/target/**
+/server/target/
+/server/target/**
+/target/
+/target/**
