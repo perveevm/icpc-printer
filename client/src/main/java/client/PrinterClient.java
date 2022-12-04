@@ -75,7 +75,8 @@ public class PrinterClient {
 
         try {
             manipulatePdf(fileName, newFileName);
-            Files.delete(Path.of(fileName));
+//            Files.delete(Path.of(fileName));
+            // TODO: fix bug here
         } catch (IOException | DocumentException e) {
             System.out.println("Error happened while manipulating pdf " + fileName + ": " + e.getMessage());
             return;

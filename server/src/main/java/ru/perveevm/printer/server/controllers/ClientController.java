@@ -41,7 +41,10 @@ public class ClientController {
                         * { font-family: 'Arial Unicode MS'; }
                     </style>
                 </head>""");
-        html.append(StringEscapeUtils.escapeHtml4(source).replace(System.lineSeparator(), "<br/>"));
+        html.append(StringEscapeUtils.escapeHtml4(source)
+                .replace(System.lineSeparator(), "<br/>")
+                .replace("\t", "    ")
+                .replace(" ", "&nbsp;"));
         html.append("</html>");
         return ResponseEntity.ok(html);
     }
