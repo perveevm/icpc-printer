@@ -4,7 +4,7 @@ printing-server:
     tokens: "/etc/icpc-printer/tokens.csv"
 
 server:
-    port: 443
+    port: 8095
     ssl:
         key-store: "/home/ejudge/keystore.p12"
         key-store-password: "ejejej"
