@@ -41,10 +41,10 @@ public class ClientController {
                         * { font-family: 'Arial Unicode MS'; }
                     </style>
                 </head>""");
-        html.append("<pre>");
+//        html.append("<pre>");
         html.append(StringEscapeUtils.escapeHtml4(source)
                 .replace(System.lineSeparator(), "<br/>"));
-        html.append("</pre>");
+//        html.append("</pre>");
         html.append("</html>");
         return ResponseEntity.ok(html);
     }
