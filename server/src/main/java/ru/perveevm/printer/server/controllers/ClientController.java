@@ -33,6 +33,10 @@ public class ClientController {
         }
 
         StringBuilder html = new StringBuilder();
+        html.append("""
+                <!DOCTYPE html [
+                  <!ENTITY nbsp "&#x000A0;">
+                ]>""");
         html.append("<html>");
         html.append("""
                 <head>
@@ -43,7 +47,9 @@ public class ClientController {
                 </head>""");
 //        html.append("<pre>");
         html.append(StringEscapeUtils.escapeHtml4(source)
-                .replace(System.lineSeparator(), "<br/>"));
+                .replace(System.lineSeparator(), "<br/>")
+                .replace("\t", "    ")
+                .replace(" ", "&nbsp;"));
 //        html.append("</pre>");
         html.append("</html>");
         return ResponseEntity.ok(html);
