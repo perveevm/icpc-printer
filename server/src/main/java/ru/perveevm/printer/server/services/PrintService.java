@@ -67,6 +67,8 @@ public class PrintService {
             }
             break;
         }
+
+        throw new PrinterException("user not found");
     }
 
     public String getSourceForPrint(final String token) {
