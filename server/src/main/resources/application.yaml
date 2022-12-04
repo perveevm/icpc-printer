@@ -1,0 +1,4 @@
+printing-server:
+    directory: "/etc/ejudge-new-code-printing/queue"
+    users: "/etc/ejudge-new-code-printing/users.csv"
+    tokens: "/etc/ejudge-new-code-printing/tokens.csv"
