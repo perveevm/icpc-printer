@@ -44,13 +44,16 @@ public class ClientController {
         html.append("""
                 <head>
                     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+                    <style type='text/css'>
+                        * { font-family: 'Arial Unicode MS'; }
+                    </style>
                 </head>
                 """);
 //        html.append("<pre>");
         html.append(StringEscapeUtils.escapeHtml4(source)
                 .replace(System.lineSeparator(), "<br/>")
-                .replace("\t", "&#09;"));
-//                .replace(" ", "&nbsp;"));
+                .replace("\t", "&#09;")
+                .replace("    ", "&#09;"));
 //        html.append("</pre>");
         html.append("</html>");
         return ResponseEntity.ok(html);
